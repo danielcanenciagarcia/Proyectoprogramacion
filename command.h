@@ -1,0 +1,18 @@
+/** 
+ * @brief It implements the command interpreter
+ * 
+ * @file command.h
+ * @author Profesores PPROG
+ * @version 1.0 
+ * @date 19-12-2014 
+ * @copyright GNU Public License
+ */
+
+#ifndef COMMAND_H          /* Primero incluimos la estructura de nuestro archivo de cabezera */ 
+#define COMMAND_H
+
+typedef enum enum_Command {NO_CMD = -1,UNKNOWN,QUIT,NEXT,BACK} T_Command;   /* Enumeración tipo T_Command */
+
+T_Command get_user_input();     /* Es necesario tomar constancia de las funciones utilizadas posteriormente en nuestro archivo de implementación(.c) */
+
+#endif

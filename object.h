@@ -16,7 +16,10 @@
 typedef struct _Object Object;
 
 Object* object_create(Id id);
-Object* object_destroy(Object* object);
+STATUS object_destroy(Object* object);
+STATUS object_set_name(Object* object, char* name);
+const char * object_get_name(Object* object);
+STATUS object_print(Object* object);
 
 
 

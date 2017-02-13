@@ -1,7 +1,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "object.h"
+#include "game.h"
 
 
 struct _Object{
@@ -70,15 +70,25 @@ const char * object_get_name(Object* object){
     return object->name;
 	
 }
-
-
-
-
-STATUS object_print(Object* object){
 	
-	
-	
+STATUS object_print(Object* object) {					 
+    
+    Id idaux = NO_ID;
+  
+    if (!object) 
+        return ERROR;
+    
+
+    fprintf(stdout, "--> Space (Id: %ld; Name: %s)\n", object->id, object->name);   
+    
+    
+    return OK;
 }
+
+
+
+
+
 
 	
 	

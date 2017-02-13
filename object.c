@@ -1,5 +1,3 @@
-
-
 #include <stdlib.h>
 #include <stdio.h>
 #include "object.h"
@@ -8,9 +6,8 @@
 struct _Object{
 	
 	Id id;
-	Id back;
-	Id next;
-	BOOL player;
+	char  name[WORD_SIZE + 1];
+	
 	
 };
 
@@ -49,34 +46,41 @@ STATUS object_destroy(Object* object){
 }
 
 
-STATUS object_set_next(Object* object, Id id){
+STATUS object_set_name(Object* object, char* name){
 	
-	
-}
+	if (!object || !name)
+        return ERROR;
+    
 
-STATUS object_set_back(Object* object, Id id){
-	
-	
-}
+    if (!strcpy(object->name, name)
+        return ERROR;
+    
 
-STATUS object_get_next(Object* object){
-	
-	
-}
-
-STATUS object_get_back(Object* object){
-	
+    return OK;
 	
 }
 
 
-STATUS object_print(Object* object){
+const char * object_get_name(Object* object){
 	
-	
+	if(!object) 
+        return NULL;
+    
+    return object->name;
 	
 }
+	
+STATUS object_print(Object* object) {					 
+    
+    Id idaux = NO_ID;
+  
+    if (!object) 
+        return ERROR;
+    
 
-	
-	
-	
-	
+    fprintf(stdout, "--> Space (Id: %ld; Name: %s)\n", object->id, object->name);   
+    
+    
+    return OK;
+}
+

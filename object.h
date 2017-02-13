@@ -8,7 +8,7 @@
  * @copyright GNU Public License
  */
 
-#ifndef OBJECT_H       					 /* Primero incluimos la estructura de nuestro archivo de cabezera y nuestros respectivos archivos de encabezamiento */ 
+#ifndef OBJECT_H       					 
 #define OBJECT_H
 #include "types.h"
 #include "game.h"
@@ -20,7 +20,3 @@ STATUS object_destroy(Object* object);
 STATUS object_set_name(Object* object, char* name);
 const char * object_get_name(Object* object);
 STATUS object_print(Object* object);
-
-
-
-

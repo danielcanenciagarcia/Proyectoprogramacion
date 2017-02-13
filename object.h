@@ -11,6 +11,7 @@
 #ifndef OBJECT_H       					 /* Primero incluimos la estructura de nuestro archivo de cabezera y nuestros respectivos archivos de encabezamiento */ 
 #define OBJECT_H
 #include "types.h"
+#include "game.h"
 
 typedef struct _Object Object;
 

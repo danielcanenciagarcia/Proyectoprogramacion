@@ -1,7 +1,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "game.h"
+#include "object.h"
 
 
 struct _Object{

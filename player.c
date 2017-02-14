@@ -9,7 +9,7 @@ struct _Player{
 	Id id;
 	char name[WORD_SIZE + 1];
 	BOOL object;
-	int space;
+	Id casilla;
 
 };
 
@@ -101,12 +101,12 @@ BOOL player_get_object(Player* player) {
     return player->object;
 }
 
-int player_get_space(Player *player){
+Id player_get_casilla(Player *player){
 	
      if(!player)
         return NO_ID;
 	
-    return player->space;
+    return player->casilla;
 	
 	
 } 
@@ -122,9 +122,9 @@ STATUS player_print(Player* player) {
     fprintf(stdout, "--> Player (Id: %ld; Name: %s)\n", player->id, player->name);   
     
     
-    idaux = player_get_space(player);
+    idaux = player_get_casilla(player);
     if (!idaux) {
-        fprintf(stdout, "--->Space: %d\n", idaux);
+        fprintf(stdout, "--->Casilla: %ld\n", idaux);
     } 
     
     if (player_get_object(player)) {

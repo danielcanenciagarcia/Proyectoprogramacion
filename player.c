@@ -57,7 +57,7 @@ STATUS player_set_name(Player* player, char* name){
         return ERROR;
     
 
-    if (!strcpy(player->name, name)
+    if (!strcpy(player->name, name))
         return ERROR;
     
 

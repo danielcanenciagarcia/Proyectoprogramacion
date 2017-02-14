@@ -76,6 +76,16 @@ STATUS player_set_object(Player* player, BOOL value) {
     return OK;
 }
 
+STATUS player_set_casilla(Player *player, Id id){
+	
+    if (!player || id == NO_ID) {
+        return ERROR;
+    }
+    player->casilla = id;
+    return OK;
+
+} 
+
 const char * player_get_name(Player* player) {           
 	
     if (!player) 

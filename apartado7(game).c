@@ -71,7 +71,8 @@ STATUS game_create(Game* game) {
     game->spaces[i] = NULL;
   }
   
-  game->player_location = NO_ID;
+	
+  game->player_location->casilla = NO_ID;
   game->object_location = NO_ID;
   game->last_cmd = NO_CMD;
   
@@ -170,11 +171,8 @@ Space* game_get_space(Game* game, Id id) {
 
 STATUS game_set_player_location(Game* game, Id id) {					
     
-    if (id == NO_ID) {
-        return ERROR;
-    }
-
-    if(player_get_casilla(Player *player)==ERROR){
+   
+    if(player_set_casilla(game->player_location, id)==ERROR){
         return ERROR;
     }
     else{

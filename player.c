@@ -103,10 +103,10 @@ BOOL player_get_object(Player* player) {
 
 int player_get_space(Player *player){
 	
-	if(!player)
-		return NO_ID;
+     if(!player)
+        return NO_ID;
 	
-	return player->space;
+    return player->space;
 	
 	
 } 

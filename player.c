@@ -8,7 +8,7 @@ struct _Player{
 
 	Id id;
 	char name[WORD_SIZE + 1];
-	BOOL object;
+	Id object;
 	Id casilla;
 
 };
@@ -28,7 +28,7 @@ Player* player_create(Id id){
 		
 	newPlayer->id = id;
 	newPlayer->name[0] = '\0';
-	newPlayer->object = FALSE;
+	newPlayer->object = object;
 	newPlayer->casilla = casilla;
 
 
@@ -93,7 +93,7 @@ Id player_get_id(Player* player) {
 }
 
 
-BOOL player_get_object(Player* player) { 				 
+Id player_get_object(Player* player) { 				 
 
     if (!player) 
         return FALSE;

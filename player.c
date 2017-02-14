@@ -86,10 +86,10 @@ const char * player_get_name(Player* player) {
 
 Id player_get_id(Player* player) {        				  
 
-    if (!space) 
+    if (!player) 
         return NO_ID;
     
-    return space->id;
+    return player->id;
 }
 
 

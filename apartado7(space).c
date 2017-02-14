@@ -13,7 +13,7 @@ struct _Space {
     Id east;
     Id west;
     BOOL object;
-    Object id_object; 
+    Object * id_object; 
 };
 
 /* Función que recibe una variable tipo Id y devuelve otra tipo newSpace */

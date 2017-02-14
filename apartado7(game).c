@@ -65,15 +65,14 @@ STATUS game_set_object_location(Game* game, Id id);
 STATUS game_create(Game* game) {										
 	
   int i;
-  Player * pl;
-  Object * ol;
+  
   
   for (i = 0; i < MAX_SPACES; i++) {
     game->spaces[i] = NULL;
   }
   
-  game->pl = NO_ID;
-  game->ol = NO_ID;
+  game->player_location = NO_ID;
+  game->object_location = NO_ID;
   game->last_cmd = NO_CMD;
   
   return OK;
@@ -175,9 +174,14 @@ STATUS game_set_player_location(Game* game, Id id) {
         return ERROR;
     }
 
-    game->pl = id;
-    
-    return OK;
+    if(player_get_casilla(Player *player)==ERROR){
+        return ERROR;
+    }
+    else{
+    	return OK;
+    }
+
+ 
 
 }
 

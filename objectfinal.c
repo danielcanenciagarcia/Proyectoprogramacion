@@ -25,9 +25,7 @@ Object* object_create(Id id){
 		return NULL;
 		
 	newObject->id = id;
-	newObject->back;
-	newObject->next;
-	newObject->player;
+	newObject->name[0] = '\0';
 	
 	return newObject;
 	
@@ -53,7 +51,7 @@ STATUS object_set_name(Object* object, char* name){
         return ERROR;
     
 
-    if (!strcpy(object->name, name)
+    if (!strcpy(object->name, name))
         return ERROR;
     
 

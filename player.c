@@ -29,7 +29,7 @@ Player* player_create(Id id){
 	newPlayer->id = id;
 	newPlayer->name[0] = '\0';
 	newPlayer->object = FALSE;
-	newPlayer->space = 0;
+	newPlayer->casilla = casilla;
 
 
 	return newPlayer;
